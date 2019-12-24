@@ -30,7 +30,7 @@ declare module "planck-renderer" {
         constructor(world: World, options: object);
         private render(): void;
         private update(): void;
-        start(render: function = null, update: function = null): void;
+        start(render?: () => void, update?: () => void): void;
         stop(): void;
     }
 }
