@@ -15,8 +15,7 @@ declare module "planck-renderer" {
     }
 
     export class CanvasRenderer {
-        private world: World;
-        private textContent: TextContent[];
+        private canvasContent: CanvasContent;
         private ctx: CanvasRenderingContext2D;
         private canvas: HTMLCanvasElement;
         private options: object;
@@ -35,11 +34,11 @@ declare module "planck-renderer" {
     }
 
     export class Runner {
-        private world: World;
+        private canvasContent: CanvasContent;
         private options: object;
         private runId: number;
 
-        constructor(world: World, options: object);
+        constructor(canvasContent: CanvasContent, options: object);
         private render(): void;
         private update(): void;
         start(render?: () => void, update?: () => void): void;
